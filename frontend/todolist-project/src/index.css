@@ -1,0 +1,209 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  text-transform: capitalize;
+  color: #102B3F;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.282);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width:100%;
+  height:110vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(to right, #6a1b9a, #ab47bc);
+  overflow-x: hidden;
+}
+.header{
+  font-size: 3em;
+  margin-bottom: 20px;
+  position: absolute;
+  top:0;
+  left:50%;
+  transform: translate(-50%,0);
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4)
+}
+.task-add-container{
+  margin-top:90px;
+  display: flex;
+  justify-content: center;
+  gap:5px;
+}
+.task-add-container input,button{
+  height:40px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.15s;
+}
+.task-add-container input{
+  width:400px;
+}
+.task-add-container button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.task-add-container button:active{
+  background-color: #ffffff82;
+}
+.task-container{
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #102B3F;
+  padding: 10px;
+  justify-content: space-between;
+  display: flex;
+  width:600px;
+  height:70px;
+  align-items: center;
+  font-size: 1.7em;
+  margin-top: 20px;
+  background-color: #E2CFEA;
+  font-weight: bold;
+  position: relative;
+}
+.task-container input{
+  width: 370px;
+  height: 50px;
+  font-size: 0.8em;
+  border:none;
+  border-radius: 10px;
+  padding: 4px;
+  background-color: #ffffff75;
+}
+.buttons-div{
+  display: flex;
+  gap:10px;
+}
+.buttons-div button, .mark-button{
+  width:50px;
+  height:50px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom:8px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px black;
+  border: none;
+  transition: 0.15s;
+}
+.buttons-div button:hover, .mark-button:hover, .arrow-buttons-div button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.buttons-div button:active, .mark-button:active{
+  background-color: #ffffff16;
+}
+
+.mark-button{
+  width:20px;
+  height:20px;
+  font-size: 15px;
+  padding: 12px;
+}
+
+.line-through{
+  text-decoration: line-through black;
+  color: rgb(96, 94, 94);
+  max-width: 420px;
+  word-break: normal;
+}
+.line-not-through{
+  text-decoration: none;
+  max-width: 420px;
+  word-break: normal;
+}
+.letter-count,.base-letter-count{
+  position: absolute;
+  color:rgba(64, 64, 64, 0.665);
+  font-weight: 100;
+  font-size: 18px;
+  left:460px;
+  top:48px;
+}
+.base-letter-count{
+  left:1105px;
+  top:105px;
+  font-size: 15px;
+}
+.arrow-buttons-div{
+  position: absolute;
+  left:600px;
+  top:-7px;
+}
+.arrow-buttons-div button{
+  background: none;
+  font-size: 25px;
+  transition: 0.25s;
+}
+.arrow-buttons-div button:active{
+  transform: rotateY(180deg);
+}
+
+/* DYNAMIC RESIZING */
+
+@media (max-width: 1569px) {
+  .header{
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 1308px){
+  .task-add-container{
+    margin-top:110px;
+  }
+}
+@media (max-width: 740px){
+  .header{
+    font-size: 2rem;
+  }
+}
+@media (max-width: 700px){
+  body{
+    transform: scale(0.95);
+  }
+}
+@media (max-width: 660px){
+  body{
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 630px){
+  body{
+    transform: scale(0.85);
+  }
+}
+@media (max-width: 600px){
+  body{
+    transform: scale(0.7);
+  }
+  .header{
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 470px){
+  body{
+    transform: scale(0.65);
+  }
+}
+@media (max-width: 440px){
+  body{
+    transform: scale(0.6);
+  }
+}
+@media (max-width: 400px){
+  body{
+    transform: scale(0.55);
+  }
+}
