@@ -15,7 +15,7 @@ export default function ToDoPage(){
   
   useEffect(()=>{
     setLoading(true)
-    fetch('http://localhost:5000/todolist')
+    fetch('http://192.168.100.12:5000/todolist')
     .then(_ => _.json())
     .then(data => setAllTasks(data.data))
     .catch(err=> console.log(err))
@@ -41,7 +41,7 @@ export default function ToDoPage(){
 
     const tasksForUpdate = newTasks.map((task,index)=>({_id: task._id, order:index}))
     
-    fetch('http://localhost:5000/todolist/reorder',{
+    fetch('http://192.168.100.12:5000/todolist/reorder',{
       method:'PUT',
       headers:{
         'Content-Type':'application/json'
@@ -71,7 +71,7 @@ export default function ToDoPage(){
     showError()
     if(taskName !== null && taskName !== ''){
       if(taskName.length > 2 && taskName.length < 50){
-        fetch('http://localhost:5000/todolist', {
+        fetch('http://192.168.100.12:5000/todolist', {
           method: "POST",
           headers: {
             'Content-Type': "application/json"

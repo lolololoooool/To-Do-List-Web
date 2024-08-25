@@ -17,7 +17,7 @@ async function runner(){
   try {
     await mongoose.connect(CONNECTION_STRING)
     console.log('db connection established')
-    app.listen(PORT, () =>{
+    app.listen(PORT, "192.168.100.12", () =>{
       console.log(`listening on port ${PORT}`)
     })
   } catch (error) {
